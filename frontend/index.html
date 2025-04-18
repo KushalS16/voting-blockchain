@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Blockchain Voting System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Blockchain Voting System</h1>
+    <button id="connectWalletBtn">Connect MetaMask</button>
+    <p id="walletAddress">Not connected</p>
+  </header>
+
+  <section class="card">
+    <h2>Step 1: Voter Registration</h2>
+    <input type="text" id="voterAddress" placeholder="Enter Voter Address" />
+    <button id="registerBtn">Register Voter</button>
+    <p id="registerStatus"></p>
+  </section>
+
+  <section class="card">
+    <h2>Step 2: Cast Your Vote</h2>
+    <select id="candidateSelect"></select>
+    <button id="voteBtn">Vote</button>
+    <p id="voteStatus"></p>
+  </section>
+
+  <section class="card">
+    <h2>Step 3: View Results</h2>
+    <button id="resultBtn">Get Results</button>
+    <ul id="resultList"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Step 4: Admin - Change Phase</h2>
+    <select id="phaseSelect">
+      <option value="1">Voting Phase</option>
+      <option value="2">Ended Phase</option>
+    </select>
+    <button id="changePhaseBtn">Change Phase</button>
+    <p id="phaseStatus"></p>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
